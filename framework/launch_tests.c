@@ -38,18 +38,18 @@ static int	print_result(int status)
 	{
 		if (WEXITSTATUS(status) == 0)
 		{
-			ft_putstr("[OK]");
+			ft_putstr("[OK]\n");
 			return (1);
 		}
 		else
-			ft_putstr("[KO]");
+			ft_putstr("[KO]\n");
 	}
 	else if (WIFSIGNALED(status))
 	{
 		if (WTERMSIG(status) == SIGSEGV)
-			ft_putstr("[SIGSEV]");
+			ft_putstr("[SIGSEV]\n");
 		else if (WTERMSIG(status) == SIGBUS)
-			ft_putstr("[SIGBUS]");
+			ft_putstr("[SIGBUS]\n");
 		else
 			ft_putstr("[UNKNOWN SIGNAL]");
 	}
@@ -97,12 +97,11 @@ int	launch_tests(t_unit_test **list)
 		tmp = next;
 	}
 	*list = NULL;
-
 	ft_putnbr(success_count);
 	ft_putstr("/");
 	ft_putnbr(total_count);
 	ft_putstr(" tests checked\n");
-	
+	ft_putstr("\n");
 	if (success_count == total_count)
 		return (0);
 	return (-1);

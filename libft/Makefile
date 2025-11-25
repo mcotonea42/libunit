@@ -67,7 +67,7 @@ $(NAME): $(OBJ)
 	@echo "$(NAME) created"
 
 %.o: %.c
-	$(sCC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	@rm -f $(OBJ)
@@ -80,4 +80,3 @@ fclean: clean
 re: fclean all
 
 .PHONY: all clean fclean re
-s
