@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "*.embeddedhtml": "html",
+        "tests.h": "c",
+        "libunit.h": "c"
+    }
+}

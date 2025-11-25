@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   01_basic_test.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mcotonea <mcotonea@student.42mulhouse.f    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/11/25 20:13:03 by mcotonea          #+#    #+#             */
+/*   Updated: 2025/11/25 20:26:01 by mcotonea         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../real_tests.h"
 
-int strlen_basic_test(void)
+int	strlen_basic_test(void)
 {
-    if (ft_strlen("Hello") == 5)
-        return (0);
-    return (-1);
+	if (ft_strlen("Hello") == 5)
+		return (0);
+	return (-1);
 }

@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   01_segv_test.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mcotonea <mcotonea@student.42mulhouse.f    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/11/25 20:14:06 by mcotonea          #+#    #+#             */
+/*   Updated: 2025/11/25 20:22:50 by mcotonea         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../../framework/libunit.h"
 
-int segv_test(void)
+int	segv_test(void)
 {
-    int *ptr;
+	int	*ptr;
 
-    ptr = NULL;
-    *ptr = 42;
-    return (0);
+	ptr = NULL;
+	*ptr = 42;
+	return (0);
 }

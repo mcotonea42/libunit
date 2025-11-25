@@ -1,7 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   01_bus_test.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mcotonea <mcotonea@student.42mulhouse.f    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/11/25 20:14:15 by mcotonea          #+#    #+#             */
+/*   Updated: 2025/11/25 20:23:28 by mcotonea         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../../framework/libunit.h"
 
-int bus_test(void)
+int	bus_test(void)
 {
-    raise(SIGBUS);
-    return (0);
+	raise(SIGBUS);
+	return (0);
 }

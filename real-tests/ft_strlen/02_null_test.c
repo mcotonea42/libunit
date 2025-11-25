@@ -1,7 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   02_null_test.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mcotonea <mcotonea@student.42mulhouse.f    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/11/25 20:13:13 by mcotonea          #+#    #+#             */
+/*   Updated: 2025/11/25 20:27:04 by mcotonea         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../real_tests.h"
 
-int strlen_null_test(void)
+int	strlen_null_test(void)
 {
-   ft_strlen(NULL);
-   return (0); 
+	ft_strlen(NULL);
+	return (0);
 }

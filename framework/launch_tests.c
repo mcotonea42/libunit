@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   launch_tests.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcotonea <mcotonea@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mcotonea <mcotonea@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/24 16:10:48 by mcotonea          #+#    #+#             */
-/*   Updated: 2025/11/24 16:27:08 by mcotonea         ###   ########.fr       */
+/*   Updated: 2025/11/25 20:12:13 by mcotonea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ int	launch_tests(t_unit_test **list)
 	t_unit_test	*next;
 	int			success_count;
 	int			total_count;
-	
+
 	success_count = 0;
 	total_count = 0;
 	tmp = *list;
