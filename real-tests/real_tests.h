@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   real_tests.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcotonea <mcotonea@student.42mulhouse.f    +#+  +:+       +#+        */
+/*   By: mcotonea <mcotonea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/25 20:13:25 by mcotonea          #+#    #+#             */
-/*   Updated: 2025/11/25 20:26:49 by mcotonea         ###   ########.fr       */
+/*   Updated: 2025/11/26 07:45:11 by mcotonea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,5 +17,8 @@
 # include "../libft/libft.h"
 
 int	strlen_launcher(void);
+int	atoi_launcher(void);
+int	bzero_launcher(void);
+int	split_launcher(void);
 
 #endif

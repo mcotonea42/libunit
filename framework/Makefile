@@ -4,7 +4,8 @@ CFLAGS = -Wall -Wextra -Werror
 NAME = libunit.a
 
 SRCS = load_tests.c \
-       launch_tests.c
+       launch_tests.c \
+       utils.c
 
 OBJS = ${SRCS:.c=.o}
 

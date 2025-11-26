@@ -1,35 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   load_tests.c                                       :+:      :+:    :+:   */
+/*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcotonea <mcotonea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/24 16:01:57 by mcotonea          #+#    #+#             */
-/*   Updated: 2025/11/26 08:12:15 by mcotonea         ###   ########.fr       */
+/*   Created: 2025/11/26 08:05:17 by mcotonea          #+#    #+#             */
+/*   Updated: 2025/11/26 08:12:25 by mcotonea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libunit.h"
 
-void	load_test(t_unit_test **list, char *name, int (*f)(void))
+void	ft_putstr(char *s)
 {
-	t_unit_test	*new;
-	t_unit_test	*tmp;
+	int	len;
 
-	new = malloc(sizeof(t_unit_test));
-	if (!new)
-		return ;
-	new->name = name;
-	new->f = f;
-	new->next = NULL;
-	if (!(*list))
-		*list = new;
-	else
-	{
-		tmp = *list;
-		while (tmp->next != NULL)
-			tmp = tmp->next;
-		tmp->next = new;
-	}
+	len = 0;
+	while (s[len])
+		len++;
+	write(1, s, len);
+}
+
+void	ft_putnbr(int n)
+{
+	char	c;
+
+	if (n > 9)
+		ft_putnbr(n / 10);
+	c = n % 10 + '0';
+	write(1, &c, 1);
+}
+
+void	display_score(int success_count, int total_count)
+{
+	ft_putnbr(success_count);
+	ft_putstr("/");
+	ft_putnbr(total_count);
+	ft_putstr(" tests checked\n");
+	ft_putstr("\n");
 }

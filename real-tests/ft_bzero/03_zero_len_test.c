@@ -1,35 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   load_tests.c                                       :+:      :+:    :+:   */
+/*   03_zero_len_test.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcotonea <mcotonea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/24 16:01:57 by mcotonea          #+#    #+#             */
-/*   Updated: 2025/11/26 08:12:15 by mcotonea         ###   ########.fr       */
+/*   Created: 2025/11/26 07:16:29 by mcotonea          #+#    #+#             */
+/*   Updated: 2025/11/26 07:59:27 by mcotonea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libunit.h"
+#include "../real_tests.h"
 
-void	load_test(t_unit_test **list, char *name, int (*f)(void))
+int	bzero_zero_len_test(void)
 {
-	t_unit_test	*new;
-	t_unit_test	*tmp;
+	char	buffer[10];
 
-	new = malloc(sizeof(t_unit_test));
-	if (!new)
-		return ;
-	new->name = name;
-	new->f = f;
-	new->next = NULL;
-	if (!(*list))
-		*list = new;
-	else
-	{
-		tmp = *list;
-		while (tmp->next != NULL)
-			tmp = tmp->next;
-		tmp->next = new;
-	}
+	ft_strlcpy(buffer, "Hello", 10);
+	ft_bzero(buffer, 0);
+	if (buffer[0] == 'H')
+		return (0);
+	return (-1);
 }

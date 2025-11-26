@@ -12,9 +12,12 @@ LIBFT_LIB = $(LIBFT_DIR)/libft.a
 INCLUDES = -I. -I$(FRAMEWORK_DIR) -I$(LIBFT_DIR)
 
 SRCS = main.c \
-       ft_strlen/00_launcher.c \
-       ft_strlen/01_basic_test.c \
-       ft_strlen/02_null_test.c
+       ft_strlen/00_launcher.c ft_strlen/01_basic_test.c ft_strlen/02_null_test.c \
+	   ft_atoi/00_launcher.c ft_atoi/01_basic_test.c ft_atoi/02_negative_test.c \
+	   ft_atoi/03_zero_test.c ft_atoi/04_max_test.c ft_atoi/05_min_test.c \
+	   ft_bzero/00_launcher.c ft_bzero/01_basic_test.c ft_bzero/02_integrity_test.c \
+	   ft_bzero/03_zero_len_test.c ft_bzero/04_null_test.c \
+	   ft_split/00_launcher.c ft_split/01_basic_test.c ft_split/02_delimiters_test.c ft_split/03_null_test.c ft_split/04_force_crash_test.c
 
 OBJS = $(SRCS:.c=.o)
 

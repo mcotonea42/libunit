@@ -3,34 +3,34 @@
 /*                                                        :::      ::::::::   */
 /*   launch_tests.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcotonea <mcotonea@student.42mulhouse.f    +#+  +:+       +#+        */
+/*   By: mcotonea <mcotonea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/24 16:10:48 by mcotonea          #+#    #+#             */
-/*   Updated: 2025/11/25 20:12:13 by mcotonea         ###   ########.fr       */
+/*   Updated: 2025/11/26 08:05:40 by mcotonea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libunit.h"
 
-static void	ft_putstr(char *s)
-{
-	int	len;
+// void	ft_putstr(char *s)
+// {
+// 	int	len;
 
-	len = 0;
-	while (s[len])
-		len++;
-	write(1, s, len);
-}
+// 	len = 0;
+// 	while (s[len])
+// 		len++;
+// 	write(1, s, len);
+// }
 
-static void	ft_putnbr(int n)
-{
-	char	c;
+// void	ft_putnbr(int n)
+// {
+// 	char	c;
 
-	if (n > 9)
-		ft_putnbr(n / 10);
-	c = n % 10 + '0';
-	write(1, &c, 1);
-}
+// 	if (n > 9)
+// 		ft_putnbr(n / 10);
+// 	c = n % 10 + '0';
+// 	write(1, &c, 1);
+// }
 
 static int	print_result(int status)
 {
@@ -97,11 +97,7 @@ int	launch_tests(t_unit_test **list)
 		tmp = next;
 	}
 	*list = NULL;
-	ft_putnbr(success_count);
-	ft_putstr("/");
-	ft_putnbr(total_count);
-	ft_putstr(" tests checked\n");
-	ft_putstr("\n");
+	display_score(success_count, total_count);
 	if (success_count == total_count)
 		return (0);
 	return (-1);

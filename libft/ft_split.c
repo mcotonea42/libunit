@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jfabregu <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mcotonea <mcotonea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 10:11:17 by jfabregu          #+#    #+#             */
-/*   Updated: 2025/11/10 10:11:18 by jfabregu         ###   ########.fr       */
+/*   Updated: 2025/11/26 07:52:08 by mcotonea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 static char	*ft_strndup(char const *s, size_t n)

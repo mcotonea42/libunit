@@ -6,7 +6,7 @@
 /*   By: mcotonea <mcotonea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/24 15:50:51 by mcotonea          #+#    #+#             */
-/*   Updated: 2025/11/24 15:54:00 by mcotonea         ###   ########.fr       */
+/*   Updated: 2025/11/26 08:06:01 by mcotonea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,8 @@ typedef struct s_unit_test
 
 void	load_test(t_unit_test **list, char *name, int (*f)(void));
 int		launch_tests(t_unit_test **list);
+void	display_score(int success_count, int total_count);
+void	ft_putstr(char *s);
+void	ft_putnbr(int n);
 
 #endif
