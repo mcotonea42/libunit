@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   real_tests.h                                       :+:      :+:    :+:   */
+/*   00_launcher.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcotonea <mcotonea@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/25 20:13:25 by mcotonea          #+#    #+#             */
-/*   Updated: 2025/11/29 21:20:47 by mcotonea         ###   ########.fr       */
+/*   Created: 2025/11/29 21:12:46 by mcotonea          #+#    #+#             */
+/*   Updated: 2025/11/29 21:15:31 by mcotonea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef REAL_TESTS_H
-# define REAL_TESTS_H
+#include "../real_tests.h"
 
-# include "../framework/libunit.h"
-# include "../libft/libft.h"
-# include "../ft_printf/ft_printf.h"
+int	ft_printf_basic_test(void);
 
-int	strlen_launcher(void);
-int	atoi_launcher(void);
-int	bzero_launcher(void);
-int	split_launcher(void);
-int	ft_printf_launcher(void);
+int	ft_printf_launcher(void)
+{
+	t_unit_test	*testlist;
 
-#endif
+	testlist = NULL;
+		ft_putstr_fd("Test of the ft_printf function\n", 1);
+
+	load_test(&testlist, "Basic test", &ft_printf_basic_test);
+	return (launch_tests(&testlist));
+}

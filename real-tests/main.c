@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcotonea <mcotonea@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mcotonea <mcotonea@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/25 20:13:20 by mcotonea          #+#    #+#             */
-/*   Updated: 2025/11/26 07:44:51 by mcotonea         ###   ########.fr       */
+/*   Updated: 2025/11/29 21:33:36 by mcotonea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,6 @@ int	main(void)
 	atoi_launcher();
 	bzero_launcher();
 	split_launcher();
+	ft_printf_launcher();
 	return (0);
 }
