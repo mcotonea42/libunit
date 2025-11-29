@@ -2,6 +2,7 @@ FRAMEWORK_DIR = framework
 TESTS_DIR = tests 
 REAL_TESTS_DIR = real-tests 
 LIBFT_DIR = libft
+FT_PRINTF_DIR=ft_printf
 
 all:
 	make -C $(FRAMEWORK_DIR)
@@ -21,6 +22,7 @@ clean:
 	@make -C $(TESTS_DIR) clean
 	@make -C $(REAL_TESTS_DIR) clean
 	@make -C $(LIBFT_DIR) clean
+	@make -C $(FT_PRINTF_DIR) clean
 	@echo "All objects cleaned."
 
 fclean: clean
@@ -28,6 +30,7 @@ fclean: clean
 	@make -C $(TESTS_DIR) fclean
 	@make -C $(REAL_TESTS_DIR) fclean
 	@make -C $(LIBFT_DIR) fclean
+	@make -C $(FT_PRINTF_DIR) fclean
 	@echo "All binaries and libraries cleaned."
 
 re: fclean all

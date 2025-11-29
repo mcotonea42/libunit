@@ -5,11 +5,13 @@ CFLAGS = -Wall -Wextra -Werror
 
 FRAMEWORK_DIR = ../framework
 LIBFT_DIR = ../libft 
+FT_PRINTF_DIR=../ft_printf 
 
 FRAMEWORK_LIB = $(FRAMEWORK_DIR)/libunit.a
 LIBFT_LIB = $(LIBFT_DIR)/libft.a
+FT_PRINTF_LIB=$(FT_PRINTF_DIR)/libftprintf.a 
 
-INCLUDES = -I. -I$(FRAMEWORK_DIR) -I$(LIBFT_DIR)
+INCLUDES = -I. -I$(FRAMEWORK_DIR) -I$(LIBFT_DIR) -I$(FT_PRINTF_DIR)
 
 SRCS = main.c \
        ft_strlen/00_launcher.c ft_strlen/01_basic_test.c ft_strlen/02_null_test.c \
@@ -17,20 +19,24 @@ SRCS = main.c \
 	   ft_atoi/03_zero_test.c ft_atoi/04_max_test.c ft_atoi/05_min_test.c \
 	   ft_bzero/00_launcher.c ft_bzero/01_basic_test.c ft_bzero/02_integrity_test.c \
 	   ft_bzero/03_zero_len_test.c ft_bzero/04_null_test.c \
-	   ft_split/00_launcher.c ft_split/01_basic_test.c ft_split/02_delimiters_test.c ft_split/03_null_test.c ft_split/04_force_crash_test.c
+	   ft_split/00_launcher.c ft_split/01_basic_test.c ft_split/02_delimiters_test.c ft_split/03_null_test.c ft_split/04_force_crash_test.c \
+	   ft_printf/00_launcher.c ft_printf/01_basic_test.c
 
 OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJS) $(FRAMEWORK_LIB) $(LIBFT_LIB)
-	$(CC) $(CFLAGS) $(OBJS) -L$(FRAMEWORK_DIR) -lunit -L$(LIBFT_DIR) -lft -o $(NAME)
+$(NAME): $(OBJS) $(FRAMEWORK_LIB) $(LIBFT_LIB) $(FT_PRINTF_LIB)
+	$(CC) $(CFLAGS) $(OBJS) -L$(FRAMEWORK_DIR) -lunit -L$(LIBFT_DIR) -lft -L$(FT_PRINTF_DIR) -lftprintf -o $(NAME)
 
 $(FRAMEWORK_LIB):
 	make -C $(FRAMEWORK_DIR)
 
 $(LIBFT_LIB):
 	make -C $(LIBFT_DIR)
+
+$(FT_PRINTF_LIB):
+	make -C $(FT_PRINTF_DIR)
 
 test: all
 	./$(NAME)
